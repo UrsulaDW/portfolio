@@ -1,0 +1,69 @@
+<div style="background: #FBFAF7; border-radius: 16px; padding: 2rem;">
+<h2 class="sr-only">Section parcours en trois cartes sans bordure, suivie de la section compétences avec certifications interactives</h2>
+
+<p style="font-size: 22px; font-weight: 500; margin: 0 0 16px; color: #1D2420;">Parcours</p>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 40px;">
+  <div style="background: #F1EEE6; border-radius: 10px; padding: 14px;">
+    <p style="font-size: 11px; color: #0F6E56; margin: 0 0 6px;">2026 – 2027</p>
+    <p style="font-size: 14px; font-weight: 500; margin: 0; color: #1D2420;">Université de Rouen</p>
+    <p style="font-size: 12px; margin: 4px 0 0; color: #5C5A52;">Licence 2 informatique</p>
+    <span style="display: inline-block; margin-top: 8px; background: #EAF3DE; color: #3B6D11; font-size: 10px; padding: 3px 10px; border-radius: 20px;">En cours</span>
+  </div>
+  <div style="background: #F1EEE6; border-radius: 10px; padding: 14px;">
+    <p style="font-size: 11px; color: #0F6E56; margin: 0 0 6px;">2025 – 2026</p>
+    <p style="font-size: 14px; font-weight: 500; margin: 0; color: #1D2420;">Université de Rouen</p>
+    <p style="font-size: 12px; margin: 4px 0 0; color: #5C5A52;">Licence 1 informatique</p>
+    <span style="display: inline-block; margin-top: 8px; background: #E4E2DB; color: #5C5A52; font-size: 10px; padding: 3px 10px; border-radius: 20px;">Terminé</span>
+  </div>
+  <div style="background: #F1EEE6; border-radius: 10px; padding: 14px; opacity: 0.4;">
+    <p style="font-size: 11px; color: #8A8880; margin: 0 0 6px;">à venir</p>
+    <p style="font-size: 14px; font-weight: 500; margin: 0; color: #8A8880;">…</p>
+  </div>
+</div>
+
+<p style="font-size: 22px; font-weight: 500; margin: 0 0 4px; color: #1D2420;">Compétences</p>
+<p style="font-size: 12px; color: #8A8880; margin: 0 0 20px;">clique sur une carte, puis clique dans le vide pour refermer</p>
+
+<div id="pageWrap2" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start;">
+  <div style="background: #FFFFFF; border: 0.5px solid #E4E2DB; border-radius: 12px; padding: 16px;">
+    <p style="font-size: 16px; font-weight: 500; margin: 0; color: #1D2420;">Vue.js</p>
+    <p style="font-size: 12px; margin: 6px 0 0; color: #0F6E56;">Débutante</p>
+    <p style="font-size: 11px; margin: 10px 0 0; color: #8A8880;">certifications : 0</p>
+    <div style="margin-top: 8px; background: #FCEBEB; color: #A32D2D; font-size: 11px; padding: 6px; border-radius: 6px; text-align: center;">Aucune certification disponible</div>
+  </div>
+  <div style="background: #FFFFFF; border: 0.5px solid #E4E2DB; border-radius: 12px; padding: 16px;">
+    <p style="font-size: 16px; font-weight: 500; margin: 0; color: #1D2420;">TypeScript</p>
+    <p style="font-size: 12px; margin: 6px 0 0; color: #0F6E56;">Débutante</p>
+    <p style="font-size: 11px; margin: 10px 0 0; color: #8A8880;">certifications : 1</p>
+    <button onclick="toggleCerts2(event,'ts2')" style="width: 100%; margin-top: 8px; font-size: 11px; padding: 6px; background: #E1F5EE; color: #0F6E56; border: none; border-radius: 6px; cursor: pointer;">Voir les certifications</button>
+    <div id="ts2" class="certBox2" style="display: none; margin-top: 10px; border-top: 0.5px solid #E4E2DB; padding-top: 10px;">
+      <div style="display: flex; align-items: center; gap: 6px; padding: 6px 0;">
+        <i class="ti ti-file-certificate" style="font-size: 15px; color: #0F6E56;"></i>
+        <span style="font-size: 11px; color: #1D2420;">Certificat TypeScript essentials</span>
+      </div>
+    </div>
+  </div>
+  <div style="background: #FFFFFF; border: 0.5px solid #E4E2DB; border-radius: 12px; padding: 16px;">
+    <p style="font-size: 16px; font-weight: 500; margin: 0; color: #1D2420;">Tailwind CSS</p>
+    <p style="font-size: 12px; margin: 6px 0 0; color: #0F6E56;">Débutante</p>
+    <p style="font-size: 11px; margin: 10px 0 0; color: #8A8880;">certifications : 0</p>
+    <div style="margin-top: 8px; background: #FCEBEB; color: #A32D2D; font-size: 11px; padding: 6px; border-radius: 6px; text-align: center;">Aucune certification disponible</div>
+  </div>
+</div>
+
+<script>
+function toggleCerts2(e, id) {
+  e.stopPropagation();
+  document.querySelectorAll('.certBox2').forEach(function(box) {
+    if (box.id !== id) box.style.display = 'none';
+  });
+  var el = document.getElementById(id);
+  el.style.display = el.style.display === 'none' ? 'block' : 'none';
+}
+document.getElementById('pageWrap2').addEventListener('click', function() {
+  document.querySelectorAll('.certBox2').forEach(function(box) {
+    box.style.display = 'none';
+  });
+});
+</script>
+</div>
