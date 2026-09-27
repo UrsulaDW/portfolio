@@ -3,6 +3,7 @@ import type { IAboutMeType } from './type'
 import { cockpitApiBaseUrl, cockpitToken } from '@/shared/config.env'
 
 export const findOneAboutMe = async (): Promise<IAboutMeType> => {
+  //const response = await fetch(`${cockpitApiBaseUrl}/content/item/portfolioaboutmesingleton`, {
   const response = await fetch(`${cockpitApiBaseUrl}/content/item/portfolioaboutmesingleton`, {
     method: 'GET',
     headers: {
